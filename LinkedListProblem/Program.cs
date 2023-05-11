@@ -10,16 +10,11 @@ namespace LinkedListProblem
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to LinkedList problem");
-
-            LinkedList<int> linkedList = new LinkedList<int>();
-            linkedList.AddLast(50);
-            linkedList.AddLast(30);
-            linkedList.AddFirst(70);
-            foreach (int element in linkedList)
-            {
-                Console.Write(element+" ");
-            }
+            CustomLinkedList customLinkedList = new CustomLinkedList();
+            customLinkedList.AddFirst(70);
+            customLinkedList.AddFirst(30);
+            customLinkedList.AddFirst(56);
+            customLinkedList.Display();
             Console.ReadLine();
         }
     }

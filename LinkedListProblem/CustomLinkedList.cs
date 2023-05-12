@@ -9,21 +9,6 @@ namespace LinkedListProblem
     public class CustomLinkedList
     {
         public Node head;
-        public void AddFirst(int data)
-        {
-            Node newNode = new Node(data);
-            if (head == null)
-            {
-                head = newNode;
-                Console.WriteLine("{0} node is added into linkelist", newNode.data);
-            }
-            else
-            {
-                newNode.next = head;
-                head = newNode;
-                Console.WriteLine("{0} node is added into linkelist", newNode.data);
-            }
-        }
         public void Append(int data)
         {
             Node newNode = new Node(data);
@@ -43,6 +28,19 @@ namespace LinkedListProblem
                 Console.WriteLine("{0} node is added into linkelist", newNode.data);
             }
         }
+        public void RemoveFirst()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("LinkedList is empty can't perform remove");
+            }
+            else
+            {
+                int delNode = head.data;
+                head = head.next;
+                Console.WriteLine("\n{0} node is removed", delNode);
+            }
+        }
         public void Display()
         {
             if (head == null)
@@ -56,7 +54,6 @@ namespace LinkedListProblem
                 {
                     Console.Write(temp.data + " ");
                     temp = temp.next;
-
                 }
             }
         }

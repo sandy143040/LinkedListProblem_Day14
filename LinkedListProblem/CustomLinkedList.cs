@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace LinkedListProblem
 {
@@ -28,18 +29,26 @@ namespace LinkedListProblem
                 Console.WriteLine("{0} node is added into linkelist", newNode.data);
             }
         }
-        public void RemoveFirst()
+        public void RemoveLast()
         {
             if (head == null)
             {
-                Console.WriteLine("LinkedList is empty can't perform remove");
+                Console.WriteLine("LinkedList is empty");
+            }
+            else if (head.next == null)
+            {
+                head = null;
             }
             else
             {
-                int delNode = head.data;
-                head = head.next;
-                Console.WriteLine("\n{0} node is removed", delNode);
+                Node temp = head;
+                while (temp.next.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = null;
             }
+            Console.WriteLine("\nLast node is removed");
         }
         public void Display()
         {

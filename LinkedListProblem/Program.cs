@@ -11,9 +11,14 @@ namespace LinkedListProblem
         static void Main(string[] args)
         {
             CustomLinkedList customLinkedList = new CustomLinkedList();
-            customLinkedList.AddFirst(70);
-            customLinkedList.AddFirst(30);
-            customLinkedList.AddFirst(56);
+            //customLinkedList.AddFirst(70);
+            //customLinkedList.AddFirst(30);
+            //customLinkedList.AddFirst(56);
+            //customLinkedList.Display();
+
+            customLinkedList.Append(70);
+            customLinkedList.Append(30);
+            customLinkedList.Append(56);
             customLinkedList.Display();
             Console.ReadLine();
         }
